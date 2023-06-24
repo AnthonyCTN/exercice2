@@ -39,7 +39,10 @@ ecercice 2 EXERCICE 2 : PERSONNE AGES v2.
 
     <script>
            document.getElementById("ageForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+      event.preventDefault()
+
+
+      #The code retrieves the values from five HTML input elements representing ages and converts them to integers using the parseInt() function.
 
       var age1 = parseInt(document.getElementById("age1").value);
       var age2 = parseInt(document.getElementById("age2").value);
@@ -48,6 +51,9 @@ ecercice 2 EXERCICE 2 : PERSONNE AGES v2.
       var age5 = parseInt(document.getElementById("age5").value);
 
       var countMinors = 0;
+
+
+      #The code uses a switch statement to check if each of the five age variables is less than 18. If an age is less than 18, the countMinors variable is incremented. The switch statement allows for multiple cases to be executed sequentially if they meet the condition.
 
       switch (true) {
         case age1 < 18:
@@ -63,6 +69,9 @@ ecercice 2 EXERCICE 2 : PERSONNE AGES v2.
       }
 
       var result = document.getElementById("result");
+
+#The code uses a switch statement to determine the value of the countMinors variable and sets the text content of the "result" element accordingly, providing different messages based on the count of minors (0, 1, or more than 1)
+
 
       switch (countMinors) {
         case 0:
